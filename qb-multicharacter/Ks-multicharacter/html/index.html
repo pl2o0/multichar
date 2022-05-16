@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
+    <title>Multicharacter</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="main-screen">
+                <div class="characters-list">
+                    <div id="characters">
+                    </div>
+                </div>
+
+                <!--
+                <div class="character-info" style="position: absolute; left: 40%; top: 20%; background-color: rgba(20, 20, 20,0.8); font-family: Heebo; color: white; border-radius: 5px; padding-left: 30px; padding-right: 30px; height: 80px;width: 300px">
+                    <i class="material-icons" id="close-reg1">close</i>
+                    <span id="name" style="position: relative; font-size: 36px; top: 20%"></span>
+                    <br />
+                    <span id="citizenid" style="font-size: 12px; position: relative; top: 10%"></span>
+            
+                    <div class="bottons" style="position: absolute; right: 20px; height: 100%; top: 35%;">
+                        <span class="loginBtn" onClick="logintochar()" style="background-color: #44bd32; border-radius: 5px; display:inline-block;padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;">Play</span>
+                        <span class="deleteBtn" onClick="deletechar()" style="background-color: #c02b2b; border-radius: 5px; display:inline-block;padding-left: 15px; padding-right: 15px; padding-top: 5px;; padding-bottom: 5px;">Delete</span>
+                    </div>
+                </div>-->
+
+                <div class="character-info" style="position: absolute; height: px; width: auto; min-width: 500px; padding: 10px; top: 15%; left: 37%; background-color: rgba(44, 44, 51, 0.92); -webkit-box-shadow: 0px 0px 0px 3px; rgba(44, 44, 51,0.44); -moz-box-shadow: 0px 0px 0px 3px rgba(44, 44, 51,0.44); box-shadow: 0px 0px 0px 3px rgba(44, 44, 51,0.44);;border-top: 5px solid #F8B138; border-radius: 15px">
+                    <i class="material-icons" id="close-reg1">X</i>
+                    <div class="charinfo" style="position: relative; top: 7%; color: white">
+                        <center>
+                            <span id="name" style="font-size: 24px; text-align: center">Asuna Yuuki</span><br>
+                            <span id="citizenid" style="font-size: 12px">ID: AQD81907</span><br>
+                        
+                            <div style="margin-top: 15px;">
+                            <!-- <button onClick="deletechar()" class="w3-button w3-round-large w3-orange w3-hover-white">Delete</button> -->
+                            <button onClick="logintochar()" class="w3-button w3-round-large w3-ligkS-green w3-hover-white">اختيار الشخصية</button>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+
+                <div class="character-register">
+                    <div class="characters-register-block-header">
+
+                        <i class="material-icons" id="close-reg">X</i>
+                    </div>
+                    <div class="char-register-inputs">
+                        <input type="text" id="first_name" placeholder="الاسم الاول" class="char-reg-input">
+                        <input type="text" id="last_name" placeholder="الاسم الاخير" class="char-reg-input">
+                        <input type="text" id="nationality" placeholder="الجنسية" class="char-reg-input">
+                        <input type="date" id="birthdate" placeholder="تاريخ الميلاد" min="1900-01-01" max="2999-12-31" class="char-reg-input">
+                        <select id="gender" name="gender">
+                            <option value="man" selected>ذكر</option>
+                            <option value="woman">انثى</option>
+                        </select>
+                    </div>
+                    <div class="character-reg-btn" id="create"><p id="create-text">تاكيد</p></div>
+                </div>
+
+                <div class="character-delete">
+                    <div class="characters-delete-block-header">
+                        <p>حذف الشخصية</p>
+                        <i class="material-icons" id="close-del">X</i>
+                    </div>
+
+                    <p>هل انت متاكد بان تريد خذف شخصيتك</p>
+                    <br>
+                    <p id="yeet">جميع معلومات الشخصية سوف يتم خذفها ولا يمكن استرجاعها</p>
+
+                    <div class="character-acceptdel-btn" id="accept-delete"><p id="accept-text">حذف الشخصية</p></div>
+                    <div class="character-canceldel-btn" id="cancel-delete"><p id="cancel-text">العودة</p></div>
+                </div>
+
+                <div id="tranCon" class="Transistion-Container">
+                    <div class="logo"></div>
+                    <div class="Transistion-col">
+                        <div id="animTran1" class="Transistion-left"></div>
+                        <div id="animTran2" class="Transistion-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
